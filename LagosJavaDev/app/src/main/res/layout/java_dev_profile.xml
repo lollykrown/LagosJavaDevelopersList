@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.example.android.lagosjavadev.MainActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:background="@color/tan_background"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="20dp">
+
+
+        <RelativeLayout
+            android:id="@+id/profile_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:background="@color/tan_background"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/profile_p"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
+                android:scaleType="fitXY"/>
+
+            <LinearLayout
+                android:id="@+id/username_container"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/profile_p"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/username_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:textColor="@color/category_colors"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:text=" @" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/category_colors"
+                    android:textColorHint="@color/category_phrases"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/url_container"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_below="@+id/username_container"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="URL: " />
+
+                <TextView
+                    android:id="@+id/url"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/url_container"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/rounded_border_numbers">
+
+                <Button
+                    android:id="@+id/share_button"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:text="share"
+                    android:textAllCaps="true" />
+            </FrameLayout>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
